@@ -11,7 +11,7 @@
   ╚═════╝ ╚══════╝ ╚═════╝   ╚═╝   ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
 ```
 
-**Unveil Hidden Vulnerabilities | Map Complete Networks | Generate Actionable Reports**
+**Unveil Hidden Vulnerabilities | Map Complete Networks | Generate Actionable Report**
 
 [![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -32,7 +32,7 @@ Decypher is designed exclusively for security professionals and authorized penet
 
 **You must obtain explicit written permission before testing any target.**
 
-Users assume all legal responsibility for the use of this tool.
+Users assume all legal responsibility for the usage of this tool.
 
 ---
 
