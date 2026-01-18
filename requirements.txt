@@ -1,0 +1,14 @@
+# Decypher - Advanced Penetration Testing Framework
+# Python Dependencies
+
+# HTTP Requests Library
+# Used for web application scanning, API testing, and vulnerability detection
+requests>=2.28.0
+
+# Optional but recommended for better performance
+# Uncomment if you want faster DNS resolution and connection handling
+dnspython>=2.3.0
+urllib3>=1.26.0
+
+# Note: All other functionality uses Python standard library
+# No additional dependencies required for basic operation
