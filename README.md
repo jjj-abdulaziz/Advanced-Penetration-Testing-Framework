@@ -11,7 +11,7 @@
   ╚═════╝ ╚══════╝ ╚═════╝   ╚═╝   ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
 ```
 
-**Unveil Hidden Vulnerabilities | Map Complete Networks | Generate Actionable Report**
+**Unveil Hidden Vulnerabilities | Map Complete Networks | Generate Actionable Reports**
 
 [![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -32,7 +32,7 @@ Decypher is designed exclusively for security professionals and authorized penet
 
 **You must obtain explicit written permission before testing any target.**
 
-Users assume all legal responsibility for the usage of this tool.
+Users assume all legal responsibility for the use of this tool.
 
 ---
 
@@ -52,6 +52,26 @@ Decypher is a professional-grade, comprehensive penetration testing framework th
 ---
 
 ## ✨ Features
+
+### 🎓 **NEW: Guided Interactive Mode**
+- **Step-by-Step Walkthroughs** - Learn while you test with detailed explanations
+- **Educational Tips** - Understand why each test matters
+- **Phase Explanations** - Learn professional pentesting methodology
+- **Attack Scenario Guidance** - Understand potential attack paths
+- **Next Steps Recommendations** - Know what to do after the scan
+
+### 🚀 **NEW: Advanced Features**
+- **WAF Detection** - Identifies Cloudflare, Akamai, AWS WAF, Imperva, and more
+- **Cloud Provider Detection** - Identifies AWS, Google Cloud, Azure, DigitalOcean
+- **Backup File Scanner** - Finds forgotten backup files (.bak, .old, .zip, etc.)
+- **Web Parameter Fuzzing** - Discovers hidden parameters
+- **Advanced API Testing** - Rate limiting, data exposure, authentication checks
+- **Attack Scenario Generation** - Suggests specific attack paths based on findings
+- **robots.txt Analysis** - Discovers hidden directories
+- **Sitemap Parsing** - Extracts URLs from sitemaps
+- **security.txt Detection** - Finds responsible disclosure contacts
+- **HTTP TRACE Detection** - Identifies XST vulnerabilities
+- **CMS Version Detection** - Precise version identification for WordPress, Joomla
 
 ### 🌐 Network Intelligence & Mapping
 - **IP Resolution & Analysis** - Resolves hostnames to IPs with network classification
@@ -196,7 +216,7 @@ pip3 install -r requirements.txt
 
 ```powershell
 # Install Python from python.org, then:
-git clone https://github.com/jjj-abdulaziz/Advanced-Penetration-Testing-Framework.git
+git clone https://github.com/jj-abdulaziz/Advanced-Penetration-Testing-Framework.git
 cd Advanced-Penetration-Testing-Framework
 pip install -r requirements.txt
 ```
@@ -207,7 +227,7 @@ pip install -r requirements.txt
 
 ```bash
 # Python 3 pre-installed
-git clone https://github.com/jjj-abdulaziz/Advanced-Penetration-Testing-Framework.git
+git clone https://github.com/jjj-abdulziz/Advanced-Penetration-Testing-Framework.git
 cd Advanced-Penetration-Testing-Framework
 pip3 install -r requirements.txt
 ```
@@ -217,30 +237,98 @@ pip3 install -r requirements.txt
 
 ## 📖 Usage
 
-### Basic Scan
+### Quick Start
 
 ```bash
+# Simply run with target - the tool will guide you through the rest!
 python3 decypher.py example.com
 ```
+
+**The tool will automatically:**
+1. Show legal disclaimer
+2. Confirm authorization
+3. Ask if you want Guided Mode (recommended) or Standard Mode
+4. Run comprehensive security assessment
+5. Generate detailed reports
+
+### Interactive Mode Selection
+
+When you run Decypher, you'll be prompted:
+
+```
+Choose your assessment mode:
+
+1. Guided Mode (Recommended)
+   • Step-by-step explanations of each phase
+   • Educational tips and security insights  
+   • Learn what each test does and why it matters
+   • Perfect for learning or understanding findings
+   • Interactive - pauses between phases
+
+2. Standard Mode
+   • Fast, automated assessment
+   • No explanations or pauses
+   • Complete scan without interruption
+   • Best for experienced users or quick scans
+
+Select mode (1 for Guided, 2 for Standard) [1]:
+```
+
+Just press **Enter** for Guided Mode (default) or type **2** for Standard Mode.
 
 ### Common Use Cases
 
 ```bash
-# Scan specific URL
+# Basic scan with interactive mode selection
+python3 decypher.py example.com
+
+# Scan specific URL  
 python3 decypher.py example.com -u https://example.com/app
 
-# Aggressive mode with more threads
+# Aggressive mode with more threads (will still ask for Guided/Standard)
 python3 decypher.py example.com -a -t 20
 
 # Custom timeout and output file
 python3 decypher.py example.com --timeout 5 -o myscan.json
 
-# Scan IP address with aggressive mode
+# Scan IP address
 python3 decypher.py 192.168.1.1 -a
 
 # Fast scan (high threads, low timeout)
 python3 decypher.py example.com -t 50 --timeout 3
 ```
+
+### What Guided Mode Teaches You
+
+In **Guided Mode**, you'll learn:
+
+- 🎯 **What each security test does** - Clear explanations of every phase
+- 🔍 **Why it matters** - Real-world security implications  
+- 🛡️ **How to interpret results** - Understanding your security posture
+- 🔧 **How to fix issues** - Actionable remediation steps
+- 📚 **Security best practices** - Professional tips throughout
+- ⚠️ **Risk assessment** - Understanding severity levels
+
+**Perfect for:**
+- Website owners checking their own security
+- IT professionals learning security assessment
+- Students studying cybersecurity
+- Anyone wanting to understand their findings
+
+### What Standard Mode Provides
+
+In **Standard Mode**, you get:
+
+- ⚡ **Fast execution** - No pauses or explanations
+- 📊 **Complete results** - All tests run automatically
+- 🎯 **Professional output** - Clean, organized findings
+- 📄 **Comprehensive reports** - JSON, HTML, and commands file
+
+**Perfect for:**
+- Quick security checks
+- Regular automated scans
+- Experienced security professionals
+- CI/CD pipeline integration
 
 ### Command-Line Arguments
 
@@ -256,6 +344,8 @@ optional arguments:
   --timeout TIMEOUT         Request timeout in seconds (default: 10)
   -o OUTPUT, --output FILE  Output report file (default: decypher_report.json)
 ```
+
+**Note:** Guided Mode is selected interactively when you run the tool - no command-line flag needed!
 
 ### Advanced Examples
 
@@ -322,35 +412,60 @@ Ready-to-execute commands for deeper testing with tools like:
 ┌─ Network Mapping & Host Discovery
   ℹ Target IP: 93.184.216.34
   ℹ Reverse DNS: example.com
+  ℹ Cloud/Hosting: AWS
   ✓ Network mapping complete
 
+┌─ Advanced Reconnaissance
+  ⚠ WAF Detected: Cloudflare
+  ℹ security.txt found at /.well-known/security.txt
+  ℹ Found 15 paths in robots.txt
+  ✓ Advanced reconnaissance complete
+
 ╔══════════════════════════════════════════════════════════════════════════╗
-║  PHASE 1: NETWORK RECONNAISSANCE                                        ║
+║  PHASE 5: VULNERABILITY TESTING                                         ║
 ╚══════════════════════════════════════════════════════════════════════════╝
 
-┌─ Port Scanning
-  ℹ Scanning ports 1-1000...
-  ℹ Port 80 open - HTTP
-  ℹ Port 443 open - HTTPS
-  ✓ Found 2 open ports
+  🔴 [CRITICAL] SQL Injection
+     └─ Error-based SQLi in parameter "id"
+     └─ CVE: CWE-89
+     └─ Command: sqlmap -u "..." -p id --batch
+     └─ Fix: Use parameterized queries
+
+⚔️  Potential Attack Scenarios:
+
+1. SQL Injection Exploitation [CRITICAL]
+   Command: Use SQLMap commands generated in report
+
+2. SSH Brute Force [HIGH]
+   Command: hydra -L users.txt -P passwords.txt ssh://example.com
 
 SEVERITY BREAKDOWN
 ────────────────────────────────────────────────────────────────────────────
 
-  🔴 CRITICAL: 0  (Immediate action required)
-  🟠 HIGH:     2  (Urgent remediation needed)
+  🔴 CRITICAL: 2  (Immediate action required)
+  🟠 HIGH:     3  (Urgent remediation needed)
   🟡 MEDIUM:   5  (Should be addressed)
   🟢 LOW:      3  (Minor issues)
+```
 
-RECOMMENDED TOOLS FOR DEEPER TESTING
-────────────────────────────────────────────────────────────────────────────
+### 🎓 Guided Mode Output
 
-┌─ Nmap (Network Scanner)
-  $ nmap -sV -sC -p 80,443 example.com
-  $ nmap -sV --script=vuln -p 80,443 example.com
+```
+╔══════════════════════════════════════════════════════════════════════════╗
+║  STEP 1: Network Reconnaissance                                         ║
+╚══════════════════════════════════════════════════════════════════════════╝
 
-┌─ Nuclei (Vulnerability Scanner)
-  $ nuclei -u https://example.com -severity critical,high,medium
+📚 What is Network Reconnaissance?
+   Scanning for open ports and services to find potential entry points.
+
+💡 Why is this important?
+   Every open port is a potential attack vector. Services running on these 
+   ports may have vulnerabilities.
+
+💡 TIP: Port scanning can be noisy and may trigger alerts. In real pentests, 
+        adjust scan speed based on client requirements.
+
+Press Enter to continue...
 ```
 
 ---
